@@ -70,6 +70,7 @@ class _MainPageState extends State<MainPage> {
           showElevation: true, // use this to remove appBar's elevation
           onItemSelected: (index) => setState(() {
             currentIndex = index;
+            _pageController.jumpToPage(index);
           }),
           items: [
             BottomNavyBarItem(
