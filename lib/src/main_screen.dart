@@ -6,12 +6,12 @@ import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 import 'pages/about.dart';
 
-class MainPage extends StatefulWidget {
+class MainScreen extends StatefulWidget {
   @override
-  _MainPageState createState() => _MainPageState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MainScreenState extends State<MainScreen> {
   int currentIndex = 0;
   PageController _pageController;
   String getToken;
