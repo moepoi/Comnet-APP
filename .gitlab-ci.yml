@@ -21,25 +21,25 @@ build:
   only:
     - merge_requests
 
-unit_test:
-  stage: test
+## unit_test:
+##   stage: test
+## 
+##   script:
+##     - flutter test test/*
+## 
+##   tags:
+##     - shared
+## 
+##   only:
+##     - merge_requests
+analyze:
+  stage: analyze
 
   script:
-    - flutter test test/*
+    - echo job excluded
 
   tags:
     - shared
 
   only:
     - merge_requests
-## analyze:
-##   stage: analyze
-## 
-##   script:
-##     - echo job excluded
-## 
-##   tags:
-##   - shared
-## 
-##   only:
-##     - merge_requests
