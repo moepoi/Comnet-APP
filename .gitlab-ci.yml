@@ -3,7 +3,7 @@ image: cirrusci/flutter:stable
 stages:
   - build
   - analyze
-  - test
+##   - test
 
 before_script:
   - flutter pub get
@@ -32,14 +32,14 @@ unit_test:
 
   only:
     - merge_requests
-analyze:
-  stage: analyze
-
-  script:
-    - echo job excluded
-
-  tags:
-  - shared
-
-  only:
-    - merge_requests
+## analyze:
+##   stage: analyze
+## 
+##   script:
+##     - echo job excluded
+## 
+##   tags:
+##   - shared
+## 
+##   only:
+##     - merge_requests
