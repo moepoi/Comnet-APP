@@ -21,7 +21,7 @@ class About extends StatelessWidget {
           ),
           SizedBox(height: 40),
           Container(
-            child: Text('VER 1.0', style: TextStyle(fontSize: 30),)
+            child: Text('VER 1.0-rev 2', style: TextStyle(fontSize: 30),)
           )
         ],
       )

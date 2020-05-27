@@ -43,7 +43,13 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(_titleBar[currentIndex]),
-          actions: <Widget>[GestureDetector(onTap: () {scanQRCode();}, child:Icon(Icons.camera)), SizedBox(width: 15)],
+          actions: <Widget>[
+            GestureDetector(
+              onTap: () {currentIndex == 0 ? scanQRCode() : SizedBox(width: 0);}, 
+              child: currentIndex == 0 ? Icon(Icons.crop_free) : SizedBox(width: 0)
+            ), 
+            SizedBox(width: 15)
+          ],
           backgroundColor: _colorBar[currentIndex]
         ),
         body: SizedBox.expand(
