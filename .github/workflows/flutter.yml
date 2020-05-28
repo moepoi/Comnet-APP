@@ -11,16 +11,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    container:
-      image:  cirrusci/flutter:stable
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Install dependencies
-      run: flutter pub get
-    - name: cleaning
-      run: flutter clean
-    - name: build
-      run: flutter build aot
-    - name: analyze
-      run: echo job excluded
+    - uses: actions/checkout@v1
+    - uses: actions/setup-java@v1
+      with:
+        java-version: '12.x'
+    - uses: subosito/flutter-action@v1
+      with:
+        channel: 'stable'
+    - run: flutter pub get
+    - run: flutter test
+    - run: flutter build apk
