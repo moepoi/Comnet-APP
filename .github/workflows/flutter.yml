@@ -1,0 +1,26 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image:  cirrusci/flutter:stable
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: flutter pub get
+    - name: cleaning
+      run: flutter clean
+    - name: build
+      run: flutter build aot
+    - name: analyze
+      run: echo job excluded
